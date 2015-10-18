@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "ConsoleApplication5\TestConsole.csproj", "{09FA7D0F-9C95-4602-A57D-ACCB6A4115BA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Json2Config.Net", "Json2Config.Net\Json2Config.Net.csproj", "{9054DBE6-C004-4808-805D-41E80B1946F7}"
 EndProject
 Global
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{09FA7D0F-9C95-4602-A57D-ACCB6A4115BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09FA7D0F-9C95-4602-A57D-ACCB6A4115BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09FA7D0F-9C95-4602-A57D-ACCB6A4115BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09FA7D0F-9C95-4602-A57D-ACCB6A4115BA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9054DBE6-C004-4808-805D-41E80B1946F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9054DBE6-C004-4808-805D-41E80B1946F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9054DBE6-C004-4808-805D-41E80B1946F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
