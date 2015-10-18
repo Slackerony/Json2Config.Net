@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Package</id>
+    <version>1.0.0</version>
+    <authors>Jonathan Østrup</authors>
+    <owners>Jonathan Østrup</owners>
+    <licenseUrl>https://github.com/Slackerony/Json2Config.Net/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Slackerony/Json2Config.Net</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>An easy to use, library for converting a class into Json and then save it to a local config file</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>Config ConfigFiles Json2Config Json2Config.Net</tags>
+    <dependencies>
+      <dependency id="SampleDependency" version="1.0" />
+    </dependencies>
+  </metadata>
+</package>
