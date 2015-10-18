@@ -24,6 +24,9 @@ namespace ConsoleApplication5
             //load all the class u just saved
             Repository loadedRepo = cfg.LoadConfig<Repository>();
 
+            //This will tell you where the config file is located
+            System.Console.WriteLine(cfg.Config.FullName);
+
         }
     }
 
