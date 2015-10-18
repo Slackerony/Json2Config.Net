@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Package</id>
+    <id>Json2Config.Net</id>
     <version>1.0.0</version>
     <authors>Jonathan Østrup</authors>
     <owners>Jonathan Østrup</owners>
