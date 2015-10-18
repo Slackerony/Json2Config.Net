@@ -1,6 +1,15 @@
 # Json2Config.Net
 An easy to use, library for converting a class into Json and then save it to a local config file.
 
+# Installation
+Installation can be done using the nuget package: 
+
+    Install-Package Json2Config.Net
+
+Can also be found here: 
+
+    https://www.nuget.org/packages/Json2Config.Net/
+
 # How to
         static void Main(string[] args)
         {
