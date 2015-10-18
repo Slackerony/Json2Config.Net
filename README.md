@@ -1,10 +1,11 @@
 # Json2Config.Net
 An easy to use, library for converting a class into Json and then save it to a local config file.
 
+# How to
         static void Main(string[] args)
         {
             //Creates the config folder & config.json
-            ConfigManager cfg = new ConfigManager("ConsoleApplication5");
+            ConfigManager cfg = new ConfigManager("ConsoleApplication5"); 
 
             //Get the class ready
             Repository repo = new Repository();
@@ -44,3 +45,9 @@ An easy to use, library for converting a class into Json and then save it to a l
         public string Username { get; set; }
         public string Password { get; set; }
     }
+    
+# Contributors
+Contributions or comments are welcome
+
+# License
+Distributed under the MIT license, which can be found [Here] (https://github.com/Slackerony/Json2Config.Net/blob/master/LICENSE)
