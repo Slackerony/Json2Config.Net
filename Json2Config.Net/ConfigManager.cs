@@ -6,35 +6,35 @@ namespace Json2Config.Net
 {
     public class ConfigManager
     {
-        public Config Config { get; set; }
+        private JsonSerializer serializer;
 
-        public ConfigManager(string applicationName)
+        public Config ConfigFile { get; set; }
+
+        public ConfigManager(
+            string applicationName, 
+            string configFileName = "config.json", 
+            Formatting jsonFormat = Formatting.Indented)
         {
-            this.Config = new Config(applicationName);
+            this.serializer = new JsonSerializer();
+            this.ConfigFile = new Config(applicationName, configFileName);
 
-            if (!Config.Exists())
+            if (!ConfigFile.Exists())
             {
-                Config.CreateDirectory();
-                Config.CreateConfig();
+                ConfigFile.CreateDirectory();
+                ConfigFile.CreateConfig();
             }
-            
-
         }
 
         public void SaveConfig<T>(T obj)
         {
-            using (StreamWriter file = File.CreateText(Config.FullName))
+            using (StreamWriter file = File.CreateText(ConfigFile.FullName))
             {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Formatting = Formatting.Indented;
-
                 serializer.Serialize(file, obj);
             }
         }
         public T LoadConfig<T>()
         {
-            T value = JsonConvert.DeserializeObject<T>(Config.Json());
-            return value;
+            return JsonConvert.DeserializeObject<T>(ConfigFile.RawJson());
         }
     }
 }
