@@ -16,6 +16,8 @@ namespace Json2Config.Net
             Formatting jsonFormat = Formatting.Indented)
         {
             this.serializer = new JsonSerializer();
+            serializer.Formatting = jsonFormat;
+
             this.ConfigFile = new Config(applicationName, configFileName);
 
             if (!ConfigFile.Exists())
