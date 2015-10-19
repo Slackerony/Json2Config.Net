@@ -18,7 +18,7 @@ namespace Json2Config.Net.Models
 
         public Config(string applicationName, string configName)
         {
-            this.Name = configName;
+            this.Name = string.Format("{0}.json", configName);
             this.ApplicationConfigFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), applicationName);
 
         }
