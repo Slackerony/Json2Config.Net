@@ -25,14 +25,7 @@ namespace Json2Config.Net.Models
 
         public bool Exists()
         {
-            if (File.Exists(FullName))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return File.Exists(FullName);
         }
 
         internal void CreateDirectory()
@@ -43,7 +36,7 @@ namespace Json2Config.Net.Models
         {
             File.Create(this.FullName);
         }
-        internal string Json()
+        internal string RawJson()
         {
             using (StreamReader sr = new StreamReader(FullName))
             {
