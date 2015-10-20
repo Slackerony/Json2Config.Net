@@ -18,5 +18,3 @@ Contributions or comments are welcome
 Distributed under the MIT license, which can be found [Here] (https://github.com/Slackerony/Json2Config.Net/blob/master/LICENSE)
 
 ***
-
-[![Download Count](https://img.shields.io/nuget/dt/Json2Config.Net.svg)](https://www.nuget.org/packages/Json2Config.Net/1.0.1)
