@@ -12,7 +12,7 @@ namespace Json2Config.Net
 
         public ConfigManager(
             string applicationName, 
-            string configFileName = "config.json", 
+            string configFileName = "config", 
             Formatting jsonFormat = Formatting.Indented)
         {
             this.serializer = new JsonSerializer();
