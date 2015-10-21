@@ -36,8 +36,6 @@ namespace Json2Config.Net
             
         }
 
-
-
         public ConfigManager(
             string applicationName,
             string configFileName,
@@ -81,6 +79,11 @@ namespace Json2Config.Net
                 created = false;
             }
             return created;
+        }
+        public void CreateAndSave<T>(T obj)
+        {
+            CreateConfig();
+            SaveConfig<T>(obj);
         }
     }
 }
