@@ -6,16 +6,43 @@ namespace Json2Config.Net
 {
     public class ConfigManager
     {
+        private const string DEFAULT_CONFIG_NAME = "config";
+        private const bool DEFAULT_CONFIG_AUTOCREATE = true;
+        private const Formatting DEFAULT_CONFIG_JSON_FORMATTING = Formatting.Indented;
+
         private JsonSerializer serializer;
 
         public Config ConfigFile { get; set; }
         public bool ConfigWasCreated { get; set; }
 
+        public ConfigManager(string applicationName)
+            : this(applicationName, DEFAULT_CONFIG_NAME)
+        {
+
+        }
+        public ConfigManager(string applicationName, string configFileName)
+            : this(applicationName, configFileName, DEFAULT_CONFIG_AUTOCREATE)
+        {
+            
+        }
+        public ConfigManager(string applicationName, bool CreateConfigIfNotExists)
+            : this(applicationName, DEFAULT_CONFIG_NAME, CreateConfigIfNotExists)
+        {
+
+        }
+        public ConfigManager(string applicationName, string configFileName, bool CreateConfigIfNotExists)
+            : this(applicationName, configFileName, CreateConfigIfNotExists, DEFAULT_CONFIG_JSON_FORMATTING)
+        {
+            
+        }
+
+
+
         public ConfigManager(
             string applicationName,
-            string configFileName = "config",
-            bool CreateConfigIfNotExists = true,
-            Formatting jsonFormat = Formatting.Indented)
+            string configFileName,
+            bool CreateConfigIfNotExists,
+            Formatting jsonFormat)
         {
             this.serializer = new JsonSerializer();
             this.serializer.Formatting = jsonFormat;
