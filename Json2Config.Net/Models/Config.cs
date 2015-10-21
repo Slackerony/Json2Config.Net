@@ -34,7 +34,8 @@ namespace Json2Config.Net.Models
         }
         internal void CreateConfig()
         {
-            File.Create(this.FullName);
+
+            File.Create(this.FullName).Close();
         }
         internal string RawJson()
         {
